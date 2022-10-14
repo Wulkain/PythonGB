@@ -65,3 +65,15 @@ y2 = int(input())
 
 distance = round(math.sqrt(math.pow((x1 - x2), 2) + math.pow((y1 - y2), 2)), 2)
 print(f'Расстояние между  точками с координатами ({x1};{y1}) и ({x2};{y2}) равно {distance}')
+
+
+
+# Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+
+for x3 in True, False:
+    for y3 in True, False:
+        for z3 in True, False:
+            if ((x3 or y3 or z3) == (not(x3) and not(y3) and not(z3))):
+                print ("True")
+            else:
+                print ("False")
